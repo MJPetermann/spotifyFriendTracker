@@ -1,0 +1,17 @@
+{
+  "name": "friendify",
+  "version": "0.0.1",
+  "description": "Stalk your Spotify-Friends",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MJPetermann",
+  "license": "ISC",
+  "dependencies": {
+    "node-cron": "^3.0.0",
+    "node-redis": "^0.1.7",
+    "redis": "^4.0.3",
+    "spotify-buddylist": "^1.0.0"
+  }
+}
