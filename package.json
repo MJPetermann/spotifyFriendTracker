@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "node-cron": "^3.0.0",
+    "redis": "^4.0.3",
     "spotify-buddylist": "^1.0.0"
   }
 }

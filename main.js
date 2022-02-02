@@ -10,6 +10,7 @@ fs.readFile('./config.cfg', 'utf8', async (err, data) => {
         return
     }
     var config = await JSON.parse(data);
+    const RedisUrl = config.url;
     cron.schedule('* * * * *', async () => {
         console.log(config);
         const {
