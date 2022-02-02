@@ -1,16 +1,19 @@
-import main from "./../main.js";
 import { createClient } from 'redis';
-const client = createClient({
-  url: main.url
-});
 
-
-
-export function printMsg() {
-    client.on('error', err => {
-      console.log('Error ' + err);
+export async function testStorenGet(RedisUrl) 
+{ 
+  console.log("1");
+  async () => {
+    const client = createClient({
+      url: RedisUrl
     });
+    console.log("2");
+    client.on('error', (err) => console.log('Redis Client Error', err));
+    console.log("3");
+    await client.connect();
+    console.log("4");
+    await client.set('key', 'value');
+    const value = await client.get('key');
   }
-export function printMsg() {
-    console.log("Node.js is awesome!");
+
 }
