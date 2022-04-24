@@ -3,12 +3,10 @@ import date from 'date-and-time';
 
 export async function storeData(RedisUrl, key, data) 
 { 
-  //let now = date.format(new Date(),'YYYY-MM-DD_HH:mm');
   const client = createClient({
     url: RedisUrl
   });
   client.on('error', (err) => console.log('Redis Client Error', err));
-
   await client.connect();
   
   await client.hSet(key, data);
@@ -51,7 +49,7 @@ export async function getAlias(RedisUrl, uri){
   
 }
 
-
+/*
 export async function createIndex(RedisUrl){
   const client = createClient({
     url: RedisUrl
@@ -73,19 +71,21 @@ export async function createIndex(RedisUrl){
   );
   await client.quit();
 }
+*/
 
-export async function checkTs(RedisUrl, timestamp){
+
+export async function checkEntry(RedisUrl, entry){
   const client = createClient({
     url: RedisUrl
   });
   client.on('error', (err) => console.log('Redis Client Error', err));
 
   await client.connect();
-  if(await client.exists(timestamp) == 1){
+  if(await client.exists(entry) == 1){
     await client.quit();
-    return 1
+    return true
   }else{
     await client.quit();
-    return 0
+    return false
   }
 }
