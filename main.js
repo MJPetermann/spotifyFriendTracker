@@ -42,12 +42,13 @@ for(let friend of friendActivity.friends){
     if(!friend || !friend.user || !friend.track) continue;
 
     let usrIdx = await getAlias(await getFromFile("url"), friend.user.uri)
+    if(usrIdx && dpExist(usrIdx)) continue;
     if(!usrIdx){
         storeList.push({["user:"+(counts.user+1)]:{name:friend.user.name,uri:friend.user.uri}});
         usrIdx = (counts.user+1)
         count.user++
     }
-    if()
+    
     console.log(friend.user.uri)
     dpList.push()
 }
