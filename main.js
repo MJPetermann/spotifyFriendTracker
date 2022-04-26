@@ -124,7 +124,6 @@ cron.schedule('* * * * *', async () => {
         if ((await client.ft.search("idx:datapoint:" + usrIdx, '@ts:[' + timestamp + " " + timestamp + "]")).total > 0) return true;
         return false;
     }
-    cLog("-----------------------------------")
     cLog("end - checking for new datapoints")
     cLog("-----------------------------------")
 });
