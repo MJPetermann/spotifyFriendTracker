@@ -1,4 +1,4 @@
-# spotifyFriendTracker
+# spotify-friend tracker
 This programm written with Node.js can request the latest music your friends been listing to from spotify and stores this information with a timestamp in a database. To reduce storage usage every information is automaticly indexed and only referenced by the timestamps. 
 
 ## Requirements
