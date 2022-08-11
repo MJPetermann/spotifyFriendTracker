@@ -9,7 +9,7 @@ This programm written with Node.js can request the latest music your friends bee
 ## Installation
 1. clone the repo `git clone https://github.com/MJPetermann/spotifyFriendTracker.git`
 2. install the needed modules`npm install`
-2. get your `spotify-token` with the help of [this guide](https://github.com/MJPetermann/spotifyFriendTracker.git#getting-the-spotify-token).
+2. get your `spotify-token` with the help of [this guide](https://github.com/MJPetermann/spotifyFriendTracker#getting-the-spotify-token).
 3. create config.cfg and paste this inside:
    ```
    {
